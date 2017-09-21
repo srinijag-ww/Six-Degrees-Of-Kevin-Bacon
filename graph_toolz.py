@@ -75,7 +75,7 @@ class Graph(object):
         f_output.close()
 
     def path(self, src, dest):
-        """ implement your shortest path function here """
+        """ shortest path function """
         shortest_path = []
         visited = set([src])
         pathTo = dict()
@@ -107,13 +107,10 @@ class Graph(object):
         return shortest_path
 
     def levels(self, src):
-        """ implement your level set code here """
         level_sizes = [1, 0, 0, 0, 0, 0, 0]
 
-        # Your code comes in here
         visited = set([src])
 
-        # Your code comes here
         queue = [ (src, 0) ]
         found = False
         while len(queue) != 0:
